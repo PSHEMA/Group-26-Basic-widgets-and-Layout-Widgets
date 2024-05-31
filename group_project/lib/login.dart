@@ -1,3 +1,5 @@
+//home dart file contains the home page of the app
+
 import 'package:flutter/material.dart';
 
 void main() {
