@@ -1,3 +1,5 @@
+//settings gradle file for android project
+
 pluginManagement {
     def flutterSdkPath = {
         def properties = new Properties()
