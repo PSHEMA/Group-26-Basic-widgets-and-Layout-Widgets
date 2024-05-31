@@ -1,3 +1,5 @@
+//build gradle file for the android project
+
 allprojects {
     repositories {
         google()
