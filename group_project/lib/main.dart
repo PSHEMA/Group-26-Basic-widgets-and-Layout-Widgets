@@ -1,5 +1,7 @@
 //main dart file
 
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'login.dart'; 
 import 'home.dart';

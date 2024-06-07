@@ -158,7 +158,7 @@ class ProductListPage extends StatelessWidget {
   Color _getColorFromName(String colorName) {
     switch (colorName) {
       case 'blue':
-        return const  Color.fromARGB(255, 35, 35, 214);
+        return const Color.fromARGB(255, 35, 35, 214);
       case 'green':
         return const Color.fromARGB(255, 13, 207, 20);
       case 'yellow':
@@ -206,31 +206,27 @@ class ProductDetailsPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                 const Text(
+                  const Text(
                     "Pixel",
-                    style: TextStyle(
-                        fontSize: 50, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 60),
                   Text(product.description),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 60),
                   Text('Price: ${product.price}'),
                 ],
               ),
             ),
-            Expanded(
-              child: Align(
-                alignment: Alignment.topRight,
-                child: Row(
-                  children: List.generate(3, (i) {
-                    return Icon(
-                      i < product.rating
-                          ? Icons.star_border
-                          : Icons.star_border,
-                      color: Colors.red,
-                    );
-                  }),
-                ),
+            Padding(
+              padding: EdgeInsets.only(left: 250, top: 50),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: List.generate(3, (i) {
+                  return Icon(
+                    i < product.rating ? Icons.star_border : Icons.star,
+                    color: Colors.red,
+                  );
+                }),
               ),
             ),
           ],
